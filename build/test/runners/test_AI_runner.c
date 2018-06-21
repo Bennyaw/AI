@@ -32,11 +32,12 @@ extern void setUp(void);
 extern void tearDown(void);
 extern void test_AI_NeedToImplement(void);
 extern void test_stringCompare_Given_Hello_and_Hello_expect_1(void);
-extern void test_stringCompare_Given_MuMbo_juMbo_and_mambo_Jumbo_1(void);
+extern void test_stringCompare_Given_MuMbo_juMbo_and_mambo_Jumbo_0(void);
 extern void test_stringCompare_Given_Rambo_and_Rambu_0(void);
 extern void test_stringCompare_Given_Hell_and_Hello_expect_0(void);
 extern void test_stringCompare_Given_Hell0_and_Hell_expect_0(void);
-extern void test_speakToAiMachine_Given_Hell_and_Hello_Hi_Hey_Greetings_expect_Hi_there_my_name_is_themachine_What_is_yours(void);
+extern void test_speakToAiMachine_Given_Hello_Hi_Hey_Greetings_expect_Hi_there_my_name_is_themachine_What_is_yours(void);
+extern void test_speakToAiMachine_Given_bye_expect_Goodbye_Have_a_nice_day(void);
 
 
 /*=======Test Reset Option=====*/
@@ -54,11 +55,12 @@ int main(void)
   UnityBegin("test_AI.c");
   RUN_TEST(test_AI_NeedToImplement, 16);
   RUN_TEST(test_stringCompare_Given_Hello_and_Hello_expect_1, 21);
-  RUN_TEST(test_stringCompare_Given_MuMbo_juMbo_and_mambo_Jumbo_1, 26);
+  RUN_TEST(test_stringCompare_Given_MuMbo_juMbo_and_mambo_Jumbo_0, 26);
   RUN_TEST(test_stringCompare_Given_Rambo_and_Rambu_0, 31);
   RUN_TEST(test_stringCompare_Given_Hell_and_Hello_expect_0, 35);
   RUN_TEST(test_stringCompare_Given_Hell0_and_Hell_expect_0, 40);
-  RUN_TEST(test_speakToAiMachine_Given_Hell_and_Hello_Hi_Hey_Greetings_expect_Hi_there_my_name_is_themachine_What_is_yours, 45);
+  RUN_TEST(test_speakToAiMachine_Given_Hello_Hi_Hey_Greetings_expect_Hi_there_my_name_is_themachine_What_is_yours, 45);
+  RUN_TEST(test_speakToAiMachine_Given_bye_expect_Goodbye_Have_a_nice_day, 57);
 
   return (UnityEnd());
 }
