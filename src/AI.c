@@ -50,8 +50,6 @@ int stringCompare(char *str1 ,char *str2)
  }
   
   
-
-
 char *speakToAiMachine(char *msg)
 {
   
@@ -63,7 +61,67 @@ char *speakToAiMachine(char *msg)
   {
     return "Goodbye. Have a nice day";
   }
+  else if(stringContain(msg,"My Name is ") == 1)
+  {
+	char*reply;
+    reply = malloc(strlen(concatenateStrings("My name is",extractName(msg))));
+    reply = concatenateStrings("Nice to meet you,",extractName(msg));
+	
+    return reply;  
+  }
+  else
   {
     return 0;
   }
 }
+
+
+char *extractName(char *name)
+{
+	char *name_copy;
+	int i=0;
+	name_copy = malloc(strlen(name)+1);
+	
+	for(i=0; i<strlen(name)-11; i++)
+	{
+		name_copy[i] = name[i+11];
+	}
+	
+	name_copy[i] = '\0';
+	
+	return name_copy;
+	
+}
+
+int stringContain(char *str1, char *str2)
+{
+	int i =0;
+	while(i<11) 
+	{
+		if (toupper(str1[i]) == toupper(str2[i]))
+		{
+			i++;
+		}
+		else
+		{
+			return 0;
+		}
+	}
+	
+	return 1;
+}
+
+char *concatenateStrings(char *str1,char *str2)
+{
+  char *newstr;
+  newstr = malloc(strlen(str1)+strlen(str2)+1);
+  
+  strcpy(newstr,str1);
+  strcat(newstr," ");
+  strcat(newstr,str2);
+  
+  
+  return newstr;
+}
+
+

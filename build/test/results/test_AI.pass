@@ -4,34 +4,46 @@
   :file: test_AI.c
 :successes:
 - :test: test_stringCompare_Given_Hello_and_Hello_expect_1
-  :line: 21
+  :line: 16
   :message: ''
 - :test: test_stringCompare_Given_MuMbo_juMbo_and_mambo_Jumbo_0
-  :line: 26
+  :line: 21
   :message: ''
 - :test: test_stringCompare_Given_Rambo_and_Rambu_0
-  :line: 31
+  :line: 26
   :message: ''
 - :test: test_stringCompare_Given_Hell_and_Hello_expect_0
-  :line: 35
+  :line: 30
   :message: ''
 - :test: test_stringCompare_Given_Hell0_and_Hell_expect_0
-  :line: 40
+  :line: 35
   :message: ''
 - :test: test_speakToAiMachine_Given_Hello_Hi_Hey_Greetings_expect_Hi_there_my_name_is_themachine_What_is_yours
-  :line: 45
+  :line: 40
   :message: ''
 - :test: test_speakToAiMachine_Given_bye_expect_Goodbye_Have_a_nice_day
-  :line: 57
+  :line: 52
+  :message: ''
+- :test: test_extractName_Given_My_name_is_Me_expect_Me
+  :line: 60
+  :message: ''
+- :test: test_stringContain_given_My_name_is_Me_expect_1
+  :line: 68
+  :message: ''
+- :test: test_stringContain_given_My_mom_is_she_expect_0
+  :line: 73
+  :message: ''
+- :test: test_stringContain_given_My_name_is_Me_without_space_expect_0
+  :line: 78
+  :message: ''
+- :test: test_with_3_function_together
+  :line: 83
   :message: ''
 :failures: []
-:ignores:
-- :test: test_AI_NeedToImplement
-  :line: 18
-  :message: Need to Implement AI
+:ignores: []
 :counts:
-  :total: 8
-  :passed: 7
+  :total: 12
+  :passed: 12
   :failed: 0
-  :ignored: 1
+  :ignored: 0
 :stdout: []
